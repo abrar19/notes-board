@@ -1,0 +1,14 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+.notes{
+    display: flex;
+    height: 100%;
+}
+.notes * {
+    font-family: sans-serif;
+}
+.notes__sidebar{
+    margin-right: 2px solid #dddddd;
+}
