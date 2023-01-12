@@ -1,14 +1,71 @@
-html, body{
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,400;8..144,700&display=swap');
+*{
     margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    font-family: 'Roboto Flex', sans-serif;
 }
 .notes{
-    display: flex;
     height: 100%;
-}
-.notes * {
-    font-family: sans-serif;
+    display: flex;
+    margin: 0px 20px 0px 20px;
 }
 .notes__sidebar{
-    margin-right: 2px solid #dddddd;
+    width: 20%;
+    padding: 20px 20px 0px 0px;
+    border-right: 2px solid #ddd;
+    /* overflow-y: auto; */
+}
+.notes__add{
+    width: 100%;
+    background: #ee2e31;
+    padding: 10px 0px;
+    color: #fff;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 7px;
+    font-family: inherit;
+    font-weight: 700;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.notes__list{
+    line-height: 1.75em;
+}
+.notes__list-item{
+    cursor: pointer;
+    padding: 10px;
+}
+.notes__list-item--selected{
+    font-weight: bold;
+    background: #f4c095;
+    border-radius: 7px;
+}
+.notes__small-title{
+    font-size: 1.5em;
+}
+.notes__small-body{}
+.notes__small-updated{
+    font-style: italic;
+    color: #ddd;
+    text-align: right;
+}
+.notes__preview{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0px 0px 40px;
+}
+.notes__title{
+    border: none;
+    font-size: 2.5em;
+    font-family: inherit;
+}
+.notes__body{
+    border: none;
+    margin-top: 20px;
+    resize: none;
+    font-family: inherit;
+    font-size: 1.25em;
 }

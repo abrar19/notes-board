@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js" type="module"></script>
     <title>Note Board</title>
 </head>
 <body>
@@ -12,6 +13,11 @@
         <div class="notes__sidebar">
             <button class="notes__add">Add Note</button>
             <div class="notes__list">
+                <div class="notes__list-item notes__list-item--selected">
+                    <div class="notes__small-title">Notes Title</div>
+                    <div class="notes__small-body">This is a new note.</div>
+                    <div class="notes__small-updated">Thursday 1:30AM</div>
+                </div>
                 <div class="notes__list-item">
                     <div class="notes__small-title">Notes Title</div>
                     <div class="notes__small-body">This is a new note.</div>
@@ -20,8 +26,8 @@
             </div>
         </div>
         <div class="notes__preview">
-            <input type="text" class="notes__title" placeholder="Enter a title here!">
-            <textarea class="notes__body">I am the notes body.</textarea>
+            <input type="text" class="notes__title" placeholder="Enter a title here...">
+            <textarea class="notes__body">I am the notes body...</textarea>
         </div>
     </div>
 </body>
