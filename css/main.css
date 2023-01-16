@@ -46,7 +46,6 @@ body{
 .notes__small-title{
     font-size: 1.5em;
 }
-.notes__small-body{}
 .notes__small-updated{
     font-style: italic;
     color: #ddd;
@@ -64,6 +63,8 @@ body{
 }
 .notes__body{
     border: none;
+    width: 60vw;
+    height: 80vh;
     margin-top: 20px;
     resize: none;
     font-family: inherit;
