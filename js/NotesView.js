@@ -34,9 +34,8 @@ export default class NotesView{
                 });
         });
 
-        console.log(this._createListItemHTML(300, 'Hey', 'Yeah mate, you got it right and it must be at least sixty characters otherwise the ternary operation we created to see if the paragraph is big then shorten it and add 3 dots is not gonna show up!', new Date()));
-
         //TODO: Hide the note preview by default
+        this.updateNotePreviewVisibility(false);
     }
 
     _createListItemHTML(id,title, body, updated){
@@ -88,5 +87,15 @@ export default class NotesView{
     updateActiveNote(note){
         this.root.querySelector('.notes__title').value = note.title;
         this.root.querySelector('.notes__body').value = note.body;
+
+        this.root.querySelectorAll('.notes__list-item').forEach((noteListItem)=>{
+            noteListItem.classList.remove('notes__list-item--selected');
+        });
+
+        this.root.querySelector(`.notes__list-item[data-note-id="${note.id}"]`).classList.add('notes__list-item--selected');
+    }
+
+    updateNotePreviewVisibility(visible){
+        this.root.querySelector('.notes__preview').style.visibility = visible ? "visible" : "hidden";
     }
 }
